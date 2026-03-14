@@ -221,7 +221,7 @@ async function ladeDropboxDatei(dateiname) {
       headers: {
         "Authorization": "Bearer sl.u.AGWt3V52TmkUMBQG0e2odZrc2vF528mMZqaoKta3PY-5J5TChiyFkxnLwfVlNm2KwWb-dQnyyuP_wmfPjlbeRt1P4tYD8Dd-2tZd8nukc_jOcshdzEc-lZXfy9OS-YWcakX4-Qyx0sFjHNfz5USzRs4nkwn1sxxh-3uBmg9AAXZ3Yq1S5ULNjswOe8QDiDWVIKK2Duxm1KQccdop5lYpTuPu42Sef6qA211sX0N83NbZY2L9czDeFSnpK8WPsUNLHFxl4pCS1FDtLhB6YHyMvdxs0ecjS0psIM5VBN4wr-B_fMbz3I9hFz_mE76siNup2HgXrtmU162Su2sCQjAEqYClpzJspO9CUjJwzt6ZFZ5VogSxEuJF1NefCwjG8zFJvuY5JcVqvA-oAvKczDPUaDgmzjEnfEPtADCOV0gE1lTX6OAToKJbELUhAMYlvIafDFVSkXduJzjAof6Qr0x8pxcpdMZkhIL289DZpmC1rcfdtd20ZIAVqqgtfxCxi9aICyzTlZlr-bu7OhdpbKG1yZquDI7vpoEYJ3cRp2S61L5KSAOoXW1zrw9BhIDszjufMIeQDx_nTqAYt9wTfE5bG0deUujNsNbXc3ahn-RjbM57yitZO-BbIwNRwQ46KqWM_eZei29-LLEC3iyk-QTVvXNzHULS12h_Ofs-q6JT_xxWwLYqLedPAgAx3Ybl4Cn85RFG8uRWF7SILhjgsN6dNZYwb8j-6bTxQNAS_z0xPaDdnRo457q466lW2GhSC3wYUXOwUsKZSJ8CuhzmcYFqLCyazljC1_XmXCrRWRNupTh8AlfjuhCGuRedXiKwFLmDHuyVagb3tROdIIKjuJrbTV99HJUaIpTs-I_M0QdkTcqSP7ZMMQuz96jxX6ngjeQqhTyPvRm1fnFV5R8ioICBch8_fy_EHbx0EgiD3jzVA0VwMoGJM2SxFtU2LJEOm4E4ktHP65k482hcADXziMUxb6s7XVloza_Cb8zXtQXkaQ8V6pGhLD3BkLbyV1PeiSoph6-VVlwcJgBwNU6HYCFfSa6ouyku3Cho0JsTdgwwOx6dCbI2BnfInhNhzMtV_DJPSLvUwALhIfGL4RvPY-0EeYPCo9ShNfYpt0S1a_tQWIvmiq8Q8OCsSkI9I4tlL9giE9LN-mqulJ8q1rJr_mlQeJAR-LRpLlA1U1RGzpzjSp8RgDmB895bHXxTDSuuoeO1dSvIAeFkQ2aRLYIFh-1_5oo-KY8fEUIj1fc76gcplMpT0RTImje-eV6AeLN8QtpxfVNRxbCQbzNs0KNeb19ZGYBI",
         "Dropbox-API-Arg": JSON.stringify({
-          path: `/Volleyball_App/Spieltage_Rohdaten/${dateiname}`
+          path: `/Volleyball/Spieltage_Rohdaten/${dateiname}`
         })
       }
     });
@@ -257,7 +257,7 @@ async function speichereDropboxDatei(dateiname, inhalt) {
     headers: {
       "Authorization": "Bearer sl.u.AGWt3V52TmkUMBQG0e2odZrc2vF528mMZqaoKta3PY-5J5TChiyFkxnLwfVlNm2KwWb-dQnyyuP_wmfPjlbeRt1P4tYD8Dd-2tZd8nukc_jOcshdzEc-lZXfy9OS-YWcakX4-Qyx0sFjHNfz5USzRs4nkwn1sxxh-3uBmg9AAXZ3Yq1S5ULNjswOe8QDiDWVIKK2Duxm1KQccdop5lYpTuPu42Sef6qA211sX0N83NbZY2L9czDeFSnpK8WPsUNLHFxl4pCS1FDtLhB6YHyMvdxs0ecjS0psIM5VBN4wr-B_fMbz3I9hFz_mE76siNup2HgXrtmU162Su2sCQjAEqYClpzJspO9CUjJwzt6ZFZ5VogSxEuJF1NefCwjG8zFJvuY5JcVqvA-oAvKczDPUaDgmzjEnfEPtADCOV0gE1lTX6OAToKJbELUhAMYlvIafDFVSkXduJzjAof6Qr0x8pxcpdMZkhIL289DZpmC1rcfdtd20ZIAVqqgtfxCxi9aICyzTlZlr-bu7OhdpbKG1yZquDI7vpoEYJ3cRp2S61L5KSAOoXW1zrw9BhIDszjufMIeQDx_nTqAYt9wTfE5bG0deUujNsNbXc3ahn-RjbM57yitZO-BbIwNRwQ46KqWM_eZei29-LLEC3iyk-QTVvXNzHULS12h_Ofs-q6JT_xxWwLYqLedPAgAx3Ybl4Cn85RFG8uRWF7SILhjgsN6dNZYwb8j-6bTxQNAS_z0xPaDdnRo457q466lW2GhSC3wYUXOwUsKZSJ8CuhzmcYFqLCyazljC1_XmXCrRWRNupTh8AlfjuhCGuRedXiKwFLmDHuyVagb3tROdIIKjuJrbTV99HJUaIpTs-I_M0QdkTcqSP7ZMMQuz96jxX6ngjeQqhTyPvRm1fnFV5R8ioICBch8_fy_EHbx0EgiD3jzVA0VwMoGJM2SxFtU2LJEOm4E4ktHP65k482hcADXziMUxb6s7XVloza_Cb8zXtQXkaQ8V6pGhLD3BkLbyV1PeiSoph6-VVlwcJgBwNU6HYCFfSa6ouyku3Cho0JsTdgwwOx6dCbI2BnfInhNhzMtV_DJPSLvUwALhIfGL4RvPY-0EeYPCo9ShNfYpt0S1a_tQWIvmiq8Q8OCsSkI9I4tlL9giE9LN-mqulJ8q1rJr_mlQeJAR-LRpLlA1U1RGzpzjSp8RgDmB895bHXxTDSuuoeO1dSvIAeFkQ2aRLYIFh-1_5oo-KY8fEUIj1fc76gcplMpT0RTImje-eV6AeLN8QtpxfVNRxbCQbzNs0KNeb19ZGYBI",
       "Dropbox-API-Arg": JSON.stringify({
-        path: `/Volleyball_App/Spieltage_Rohdaten/${dateiname}`,
+        path: `/Volleyball/Spieltage_Rohdaten/${dateiname}`,
         mode: "overwrite"
       }),
       "Content-Type": "application/octet-stream"
