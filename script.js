@@ -215,28 +215,35 @@ function generiereSpielJSON() {
 ----------------------------------------- */
 
 async function ladeDropboxDatei(dateiname) {
-  console.log("ladeDropboxDatei wurde aufgerufen:", dateiname);
   try {
     const response = await fetch("https://content.dropboxapi.com/2/files/download", {
       method: "POST",
       headers: {
         "Authorization": "Bearer sl.u.AGUKTGFLlVErWCcA2n3NMVmLq_mGMgqrOL-tswCVlQCvLNjEXgyB7ZLusKC6PrmXjI9n1P5CDYZjIepRS3mekolh_ymgR_iZJsrkFcj1_AXfuLfhqCg2D0AEv8WxhBgAZIutIXYLX9JqhvDeCSzwge9ZsxJ2zXLYBmObNkQpAiXLNLbXroQ9af0Oihuen20gma90yhj5dCRl4CmJMT8lb6YVR6qddDwlBg0xLY4Jio3aQC_6y2HzniTcnyy2Dna-DveX7Jzb6G4R8Mt29WMPeqacZUHNGKPjhxm_XWq1PR8VHsfmL7RMcRzK2uQsl3CU16afJJAoBphN5piWc_B8VbZt2ZDeysoMRk_vTlafHkiMhlNxvQUAIo50CHTlVi28aMINy6O1d2p9ArWdIDAwm0H2PrSERpGtpzfzzhmmm_vmX3095ET5jRKZOhelNeuTSxGG7XBUImny3nVQM4XOJKPVRKcElKv81QuI9ORk-fAvs-rUCDx7-VDYsPjjJrpib3BIR35OSVTW7O7d-aWukrBxmHyWTOh_Y1XDJYnBHbHleP-QD5v5Gn_TzmgVOm1DxJgkjgcZ_VRAJlhP6oJvJ2f1iCnSqMSl2YoGwZD5cGlcm6VMx0DlvwY1_hcmFhuXv79dMCJ7gxKMYVyjHIXgRKMfXGwaqQxJv1UBfmv1yXuCgZ9GLSFDuxKqwHClYypfeUO3lHW6Mc52qT20iyzu-z56PCbOnq8cliwJd0YXQmCJwuKnFCG_InjRdJPyiyX3hkOsGmffjYyPGPAJwyMP0uBfbwGFbDVYjSRrosdClFV9oHht2xcFQeQlkx7AIixxlsdn5m1SGG28BiZLF8g612WFI4EbkkWH-NMED-hdN49Vi5dHLsmc7mbFBRqxp2FO9Qlq6JWY1ks8xBxME-BUPcHZmlUkUD1oORTr23EZOVJ5mtYxQwoYU87IIncyqPFEIvfPQ7-paTxPXCH9KKwZzkg-a-ryH8GESKLPV4hER3sVbbX7PkSjbEKkvfa05MLF3CQYIDE9im6FHgrh7Ln7l_x2k_Lsveri4rYYpJLBgTRwE67t78f4Yz62a7EbpSn7Z3c7BwoYIbhmgJBiKfWATb6pCtKm2TVLRhWUGt-nRuDRu0OeU-vp0x-KC4UiRSVOT9rAFKqWk_HHwWd6OdXwfGr08cvlvQl5pDUBVgrRXfdPgcauWenlsaVQaZzJavK1YJodD90738VfC_NYt0Fu_lckUSTsa8uBZa3wLRlYGjj8MnB3R-ljqGmHrlbCYanMbxReVTLvYLm3YietD52QC0FF",
         "Dropbox-API-Arg": JSON.stringify({
-          path: `/Apps/Volleyball_App/Spieltage_Rohdaten/${dateiname}`,
+          path: `/Apps/Volleyball_App/Spieltage_Rohdaten/${dateiname}`
         })
       }
     });
 
-    if (!response.ok) return null;
+    if (response.status === 409) {
+      console.log("Datei existiert noch nicht – wird neu erstellt.");
+      return null;
+    }
+
+    if (!response.ok) {
+      console.log("Dropbox Download Fehler:", response.status);
+      return null;
+    }
 
     const text = await response.text();
     return JSON.parse(text);
 
   } catch (e) {
+    console.log("Dropbox Download Exception:", e);
     return null;
   }
 }
-
 
 /* -----------------------------------------
    12. Dropbox: Datei speichern
@@ -244,6 +251,7 @@ async function ladeDropboxDatei(dateiname) {
 
 async function speichereDropboxDatei(dateiname, inhalt) {
    console.log("speichereDropboxDatei wurde aufgerufen:", dateiname);
+   
    return fetch("https://content.dropboxapi.com/2/files/upload", {
     method: "POST",
     headers: {
