@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Volleyball Spieltag</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Volleyball Spieltag</h1>
+
+  <!-- Meta-Infos: Datum, Uhrzeit, Ort -->
+  <div id="metaBox">
+    <h3>Spieltag-Informationen</h3>
+
+    <div class="meta-row">
+      <label for="datum">Datum:</label>
+      <input type="date" id="datum">
+    </div>
+
+    <div class="meta-row">
+      <label for="uhrzeit">Uhrzeit:</label>
+      <input type="time" id="uhrzeit">
+    </div>
+
+    <div class="meta-row">
+      <label for="ort">Ort:</label>
+      <select id="ort">
+        <option value="Bietigheim">Bietigheim</option>
+        <option value="Breitenauer See">Breitenauer See</option>
+        <option value="Lauffen">Lauffen</option>
+        <option value="Kirchheim">Kirchheim</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Spieler-Auswahl -->
+  <div>
+    <h3>Spieler & Teams</h3>
+    <div id="spielerBox">
+      <!-- Wird später per JS mit Spielern + Checkboxen gefüllt -->
+    </div>
+  </div>
+
+  <!-- UmDie: Wer hat Aufschlag gewonnen -->
+  <div id="umDieBox">
+    <h3>Aufschlag-Verlosung (Um die)</h3>
+    <label>
+      <input type="radio" name="umDie" value="1">
+      Team 1
+    </label>
+    <label>
+      <input type="radio" name="umDie" value="2">
+      Team 2
+    </label>
+  </div>
+
+  <!-- Sätze -->
+  <div id="saetzeBox">
+    <h3>Sätze</h3>
+
+    <div class="satz-row">
+      <label>Satz 1:</label>
+      <input type="number" class="satz1-t1" placeholder="Team 1" min="0">
+      <input type="number" class="satz1-t2" placeholder="Team 2" min="0">
+    </div>
+
+    <div class="satz-row">
+      <label>Satz 2:</label>
+      <input type="number" class="satz2-t1" placeholder="Team 1" min="0">
+      <input type="number" class="satz2-t2" placeholder="Team 2" min="0">
+    </div>
+
+    <div class="satz-row">
+      <label>Satz 3 (optional):</label>
+      <input type="number" class="satz3-t1" placeholder="Team 1" min="0">
+      <input type="number" class="satz3-t2" placeholder="Team 2" min="0">
+    </div>
+  </div>
+
+  <!-- Aktionen -->
+  <div id="aktionenBox">
+    <button id="btnSpielSpeichern">Spiel speichern</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

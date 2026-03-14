@@ -1,0 +1,104 @@
+/* Grundlayout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f7f7f7;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Boxen */
+#metaBox, #umDieBox, #saetzeBox, #aktionenBox {
+  background: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Meta-Infos */
+.meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.meta-row label {
+  width: 120px;
+  font-weight: bold;
+}
+
+/* Spielerbox */
+#spielerBox {
+  width: 100%;
+  max-height: 350px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  background: white;
+  margin-bottom: 20px;
+}
+
+.spieler-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.spieler-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.team-checks {
+  display: flex;
+  gap: 15px;
+}
+
+/* Sätze */
+.satz-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.satz-row label {
+  width: 120px;
+  font-weight: bold;
+}
+
+.satz-row input {
+  width: 80px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+}
+
+/* Buttons */
+#aktionenBox {
+  text-align: center;
+}
+
+#aktionenBox button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background: #0078d4;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#aktionenBox button:hover {
+  background: #005fa3;
+}
