@@ -6,7 +6,7 @@ const alleSpieler = [
   "Timo", "Leonie", "Alex", "Jan", "Wiebke", "Benny",
   "Munzi", "Franz", "Raphael", "Anton", "JP", "Kevin",
   "Thilo", "Poly", "Anne", "Anja", "Marcel", "Kerstin",
-  "Gast1", "Gast2", "Normalo 1", "Normalo 2", "Profi 1", "Profi 2"
+  "Gast 1", "Gast 2", "Normalo 1", "Normalo 2", "Profi 1", "Profi 2"
 ];
 
 /* -----------------------------------------
