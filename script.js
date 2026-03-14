@@ -39,11 +39,11 @@ function baueSpielerListe() {
       <div class="team-checks">
         <label>
           <input type="checkbox" class="team1" data-name="${name}">
-          T1
+          Team 1
         </label>
         <label>
           <input type="checkbox" class="team2" data-name="${name}">
-          T2
+          Team 2
         </label>
       </div>
     `;
