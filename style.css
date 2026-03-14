@@ -74,24 +74,28 @@ h1 {
 }
 
 .spieler-name {
-  flex: 0.3; /* halbiert */
+  flex: 0.4; /* genug Platz für Checkboxen */
   font-weight: 600;
+}
+
+.team-checks {
+  display: flex;
+  gap: 20px;
+  white-space: nowrap; /* verhindert Umbruch */
 }
 
 .team-checks label {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 2.0rem; /* größere Schrift */
-  white-space: nowrap; /* verhindert Umbruch */
+  gap: 8px;
+  font-size: 1.8rem;
 }
 
 .team-checks input[type="checkbox"] {
-  width: 30px;   /* echte Größe */
-  height: 30px;  /* echte Größe */
-  transform: scale(1.5); /* zusätzliche optische Vergrößerung */
+  width: 24px;
+  height: 24px;
+  transform: scale(1.2);
 }
-
 
 /* =========================================
    Sätze
