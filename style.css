@@ -83,6 +83,7 @@ h1 {
   align-items: center;
   gap: 10px;
   font-size: 2.0rem; /* größere Schrift */
+  white-space: nowrap; /* verhindert Umbruch */
 }
 
 .team-checks input[type="checkbox"] {
