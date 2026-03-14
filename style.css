@@ -54,7 +54,7 @@ h1 {
    Spielerbox (Scrollbox)
 ========================================= */
 #spielerBox {
-  width: 80%;          /* schmäler */
+  width: 60%;          /* schmäler */
   max-height: 550px;   /* deutlich höher */
   margin: 0 auto 25px; /* zentriert */
   overflow-y: auto;
