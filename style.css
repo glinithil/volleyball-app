@@ -82,13 +82,13 @@ h1 {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 1.8rem; /* größere Schrift */
+  font-size: 2.0rem; /* größere Schrift */
 }
 
 .team-checks input[type="checkbox"] {
-  width: 28px;   /* echte Größe */
-  height: 28px;  /* echte Größe */
-  transform: scale(1.3); /* zusätzliche optische Vergrößerung */
+  width: 30px;   /* echte Größe */
+  height: 30px;  /* echte Größe */
+  transform: scale(1.5); /* zusätzliche optische Vergrößerung */
 }
 
 
@@ -154,7 +154,7 @@ h1 {
   }
 
   #spielerBox {
-    width: 20%;
+    width: 60%;
     max-height: 500px;
   }
 
