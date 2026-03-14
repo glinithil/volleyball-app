@@ -1,104 +1,163 @@
-/* Grundlayout */
+/* =========================================
+   Grundlayout
+========================================= */
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
   background: #f7f7f7;
   color: #333;
+  font-size: 1.8rem; /* deutlich größere Schrift */
 }
 
 h1 {
   text-align: center;
   margin-bottom: 25px;
+  font-size: 2.4rem;
 }
 
-/* Boxen */
+/* =========================================
+   Boxen
+========================================= */
 #metaBox, #umDieBox, #saetzeBox, #aktionenBox {
   background: white;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
   border: 1px solid #ccc;
 }
 
-/* Meta-Infos */
+/* =========================================
+   Meta-Infos
+========================================= */
 .meta-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin: 8px 0;
+  gap: 15px;
+  margin: 12px 0;
 }
 
 .meta-row label {
-  width: 120px;
+  width: 150px;
   font-weight: bold;
+  font-size: 1.6rem;
 }
 
-/* Spielerbox */
+.meta-row input,
+.meta-row select {
+  font-size: 1.6rem;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+}
+
+/* =========================================
+   Spielerbox (Scrollbox)
+========================================= */
 #spielerBox {
-  width: 100%;
-  max-height: 350px;
+  width: 80%;          /* schmäler */
+  max-height: 550px;   /* deutlich höher */
+  margin: 0 auto 25px; /* zentriert */
   overflow-y: auto;
   border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 6px;
+  padding: 15px;
+  border-radius: 8px;
   background: white;
-  margin-bottom: 20px;
 }
 
 .spieler-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 0;
+  padding: 12px 0;
   border-bottom: 1px solid #eee;
+  font-size: 1.6rem;
 }
 
 .spieler-name {
   flex: 1;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .team-checks {
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  font-size: 1.6rem;
 }
 
-/* Sätze */
+/* =========================================
+   Sätze
+========================================= */
 .satz-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin: 8px 0;
+  gap: 15px;
+  margin: 12px 0;
 }
 
 .satz-row label {
-  width: 120px;
+  width: 150px;
   font-weight: bold;
+  font-size: 1.6rem;
 }
 
 .satz-row input {
-  width: 80px;
-  padding: 5px;
-  border-radius: 4px;
+  width: 100px;
+  padding: 8px;
+  border-radius: 6px;
   border: 1px solid #aaa;
+  font-size: 1.6rem;
 }
 
-/* Buttons */
+/* =========================================
+   Buttons
+========================================= */
 #aktionenBox {
   text-align: center;
 }
 
 #aktionenBox button {
-  padding: 12px 20px;
-  font-size: 16px;
+  padding: 18px 25px;
+  font-size: 1.8rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   background: #0078d4;
   color: white;
   cursor: pointer;
   transition: background 0.2s ease;
+  width: 80%;
+  max-width: 400px;
 }
 
 #aktionenBox button:hover {
   background: #005fa3;
+}
+
+/* =========================================
+   Mobile Optimierung
+========================================= */
+@media (max-width: 600px) {
+
+  body {
+    font-size: 1.6rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #spielerBox {
+    width: 95%;        /* auf Handy fast volle Breite */
+    max-height: 500px;
+  }
+
+  .meta-row label,
+  .satz-row label {
+    width: 120px;
+  }
+
+  #aktionenBox button {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 20px;
+  }
 }
