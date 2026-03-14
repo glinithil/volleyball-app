@@ -74,7 +74,7 @@ h1 {
 }
 
 .spieler-name {
-  flex: 0.5; /* halbiert */
+  flex: 0.3; /* halbiert */
   font-weight: 600;
 }
 
