@@ -215,6 +215,7 @@ function generiereSpielJSON() {
 ----------------------------------------- */
 
 async function ladeDropboxDatei(dateiname) {
+  console.log("ladeDropboxDatei wurde aufgerufen:", dateiname);
   try {
     const response = await fetch("https://content.dropboxapi.com/2/files/download", {
       method: "POST",
@@ -242,7 +243,8 @@ async function ladeDropboxDatei(dateiname) {
 ----------------------------------------- */
 
 async function speichereDropboxDatei(dateiname, inhalt) {
-  return fetch("https://content.dropboxapi.com/2/files/upload", {
+   console.log("speichereDropboxDatei wurde aufgerufen:", dateiname);
+   return fetch("https://content.dropboxapi.com/2/files/upload", {
     method: "POST",
     headers: {
       "Authorization": "Bearer sl.u.AGVDT4i2vpQmM1YFczSrBNR-EBC-57wrpfnC9WNeiXSNbImDWhztnq03ZURlGoDEamK5Xu-JmbjWwmJDqf5KmyAHputWgB_W1OUKXoCkOMpNJo526iUa-1-GgGYp_73d0AxDOckoE8teOfCr-MmIakHzBhwQ7mwf1N_fiDrQ5sr699Yc5fii8ghSCEjKkItKfDEVqU7yzGzZQGp_79uM-9we_5MSzCfvj8atXP6GeHcPzRsIRTfltDF8v1ccEZpT9Y-vT6QBkCeAQ2bU8LiAUfb0I4bhtIRmEn8ukZf1ps9jCRYyglZMJRpRQU78OuWW5N_s-G-J6jnWKVGnSgzDIYGTHFGwOu15zVEbn5N_1LcT1_Lv6ANcc2-RvoPJ4KGt2XYSUAIT-ElzzhRG-Nqes5nspgZV8GQUpCrSUCrvisQtLEYalinzWoj3zFT40j3gcGIUwVL-CCNUbOOJR-39hxDq45-nXg6ZW4stQZy9qOuWM2jS5guGdiGJTqTpmZ_qRYyg2cPeIZAcBg11jCIOw2MeTPRXf6c63x78d1ItCMuza-8gIdcc6no1SsM5WlEC_ksXM5hJf_nf8UalQ3oFCGsdTbPORlgkdiCXO8fJo_9hJXoxfqoZKFxY8b1y2gxgRl_-5RwGuOxz64bPZQNPkCY0PqDwwfVGRp8nO_N5wePsLEP-BrOp03cPR_so5UXP75nUW07Q9j7NTZav5wJY1Oq6uMywGkawAGH6Mm4gRM-edzSEsuiKcNGzQX4wVBdZQyuYkG2MwQDIVlCPJzyeJsroSrxR353klt_THzF0MnNcIiWHgmqHNELWvh38jyiYsnBBnRZgIKLH6ZF-JF7wEfVHvzRlzCTUSXuHk8R34FcuhsCmHPUqk6QCHdaDflTLMTP9AMJhH4LftXOb5yJNIDYKCz7RR7jFLTQFs7TfcrSF_yfNCyixMg-txfKP_4_XYkEI6SBdXzOjlkzt2ByJOLOwZ-hwNx08IZiHXnw69MB-T_XpPuzWIxSVkf-x7ss_DrIDg1c9xL3kL6dwttWe3oNx48j31Zo4QForBzlAqVxLb8DxNJUsI6u35o1XnmRGxiZ2c7qwot2yojIP-nBUxOZtjZ1GbmSJbv-wxI23q6xRSEoxfsTZFEDLYlZKtCqUJu1IdZonXoLgGkpmxzh5Na6W12YtI3aNixdpy2Y13m57KF5pGygMKj-14tBvoxu1lNf0ffuyKYn359wjrgU0lFfN9Tn_X-JsNuBwbTb_-LWK3RIcLrb6gU8F88Qe68CfknaaQcO9-zS7A7d3zLqWw95s",
