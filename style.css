@@ -146,7 +146,7 @@ h1 {
   }
 
   #spielerBox {
-    width: 70%;        /* auf Handy fast volle Breite */
+    width: 20%;        /* auf Handy fast volle Breite */
     max-height: 500px;
   }
 
